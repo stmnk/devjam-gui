@@ -19,7 +19,7 @@ DETA_METHOD = 'GET'
 # st.set_page_config(layout='wide')
 
 
-st.title('DevJam: An overview of Question Answering and related NLP tasks')
+st.title('DevJam: Question answering help desk applications and related NLP tasks')
 
 
 ##########################################################
@@ -248,6 +248,26 @@ if st.button('Run similarity ranking (get relevance prediction within paragraph 
     else:
         st.write('Write a paragraph and a question to compute similarity')
         st.stop()
+
+st.subheader('Semantic retrieval or vector similarity search')
+###########################################################
+
+with st.beta_expander("Formal definition of Cosine similarity (click to see the details)"):
+    st.write("""
+        The Cosine Similarity metric, derived from the Euclidiean dot product, is defined by:
+    """)
+    st.latex(
+        r'''\mathrm{cos\_sim} (\bf{V},\bf{U})=\frac {\bf{V}\cdot \bf{U}}{\|\bf{V}\| \|\bf{U}\|}\\'''
+    )
+    st.latex(
+        r''' = \frac{\sum_{i=1}^n V_i U_i}{\sqrt{\sum_{i=1}^n V_i^2}\sqrt{\sum_{i=1}^n U_i^2}}'''
+    )
+    st.write("""where:  """)
+    st.latex(
+        r'''\textrm{$\bf{V}$ and $\bf{U}$  are two non-zero vectors of an inner product space,}\\'''
+        r'''\textrm{$V_i$ and $U_i$ are the subcompenents of vectors $\bf{V}$ and $\bf{U}$, respectively,}\\'''
+        r'''\textrm{and $\|\bf{V}\|$ denotes the euclidian magnitude of the vector $\bf{V}$.}\\'''
+    )
 
 ###############################################################
 st.subheader('3. Dense paragraph retrieval or semantic search')
