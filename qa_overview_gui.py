@@ -128,7 +128,7 @@ if st.button('Run sparse information retrieval (get relevance prediction in bons
         ]
 
         df = pd.DataFrame.from_dict(docs_dict[0:similarity_list_size_bonsai])
-        st.dataframe(df.style.highlight_max(axis=0), 1600, 300)
+        # st.dataframe(df.style.highlight_max(axis=0), 1600, 300)
         st.write(bonsai_hits[0:similarity_list_size_bonsai]) 
         st.table(data=df)
     else:
@@ -242,7 +242,7 @@ if st.button('Run similarity ranking (get relevance prediction within paragraph 
         st.write(f'Most relevan passages (as candidates to contain the right answer) are: ')
 
         df_custom = pd.DataFrame.from_dict(relevance_list)
-        st.dataframe(df_custom.style.highlight_max(axis=0), 1600, 300)
+        # st.dataframe(df_custom.style.highlight_max(axis=0), 1600, 300)
         st.write(relevance_list) 
         st.table(data=df_custom) 
     else:
