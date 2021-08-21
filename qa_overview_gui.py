@@ -137,7 +137,7 @@ if st.button('Run sparse information retrieval (get relevance prediction in bons
 
 
 
-with st.beta_expander("Formal definition of TF-IDF (click to see the details)"):
+with st.expander("Formal definition of TF-IDF (click to see the details)"):
     st.write("""
         The TF-IDF (term frequency inverse document frequency) is a metric of 
         similarity defined by:
@@ -252,7 +252,7 @@ if st.button('Run similarity ranking (get relevance prediction within paragraph 
 st.subheader('Semantic retrieval or vector similarity search')
 ###########################################################
 
-with st.beta_expander("Formal definition of Cosine similarity (click to see the details)"):
+with st.expander("Formal definition of Cosine similarity (click to see the details)"):
     st.write("""
         The Cosine Similarity metric, derived from the Euclidiean dot product, is defined by:
     """)

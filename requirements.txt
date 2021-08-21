@@ -3,5 +3,5 @@ pandas
 sklearn
 requests
 streamlit
-elasticsearch
+elasticsearch<7.14
 python-dotenv
